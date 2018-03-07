@@ -1,0 +1,40 @@
+Machine learning project on census income prediciton
+
+1) Problem statement : 
+
+Given the feature vector, the goal is to build the machine learning model to 
+predict the income group.
+
+
+2) Data exploration and manipulation
+
+The dataset used for this project was acquired from UCI machine learning repository. 
+Train dataset has  32561 rows and 14  columns (features) while test data set has 16281 rows.
+Classifiation task is binary classification problem, i.e, to predict weather the income 
+level is above 50k or below. 
+
+Further analyzing the class distribution, the ratio of two class (income less than 50k 
+to income more than 50K) is found to be 3:1. 
+
+Bar charts were plotted for different categorical variables in adjeacent with dependent 
+variables. Similarly, histograms were also plotted for continous variables. 
+
+
+3 ) Predictive modeling
+
+Random forest and xgboost model have good majority class prediction accuracy. However, they 
+both have disappoininting  minority class prediction accuracy. In order to over come 
+the class imbalance in dataset, SMOTE sampling technique was used and both models were fitted 
+again in sampled dataset. This didn't lead to cosiderable improvemnt in predicting minority 
+class. 
+Finally, different cut off probability for prediciton was used as the threshold of 0.5
+ will always favor the majority class since the probability of a minority class
+ is quite low. xgboost model With 0.4 threshold returned better predictions than
+ previous xgboost model at 0.5 threshold.
+
+
+
+
+
+  
+
